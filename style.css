@@ -154,10 +154,16 @@ body {
   If the navmenu gets too huge or tiny), I can simply create a breakpoint
   and change the --navmenu-x variable value.
   */
-  border-radius: calc(var(--navmenu-x) * 0.125);
+
+  /*
+  Section below is replaced in each breakpoint, removing the variable calculations 
+  and replacing them with hard-coded vw values to try to fix the problems in iOS.
+  */
+
+  /* border-radius: calc(var(--navmenu-x) * 0.125);
   width: calc(var(--navmenu-x) * .88);
   height: calc(var(--navmenu-x) * .12);
-  padding: calc(var(--navmenu-x) * .01);
+  padding: calc(var(--navmenu-x) * .01); */
 }
 @keyframes zoom-in {
   0% {
@@ -180,11 +186,17 @@ body {
   align-items: center;
   text-align: center;
   /* See note above regarding calculations */
-  width: calc(var(--navmenu-x) * .062);
+
+  /*
+  Section below is replaced in each breakpoint, removing the variable calculations 
+  and replacing them with hard-coded vw values to try to fix the problems in iOS.
+  */
+  
+  /* width: calc(var(--navmenu-x) * .062);
   height: calc(var(--navmenu-x) * .8);
   margin: calc(var(--navmenu-x) * -.01) calc(var(--navmenu-x) * .021);
   padding: calc(var(--navmenu-x) * .0112);
-  background-size: calc(var(--navmenu-x) * 0.108);
+  background-size: calc(var(--navmenu-x) * 0.108); */
 }
 
 .nav__menu-item a {
@@ -195,10 +207,16 @@ body {
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
-  width: calc(var(--navmenu-x) * .105);
+
+  /*
+  Section below is replaced in each breakpoint, removing the variable calculations 
+  and replacing them with hard-coded vw values to try to fix the problems in iOS.
+  */
+  
+  /* width: calc(var(--navmenu-x) * .105);
   height: calc(var(--navmenu-x) * .105);
   border-radius: calc(var(--navmenu-x) * .055);
-  background-size: calc(var(--navmenu-x) * .1);
+  background-size: calc(var(--navmenu-x) * .1); */
 }
 
 .nav__menu-item span {
