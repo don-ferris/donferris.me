@@ -17,12 +17,6 @@ body {
   animation-duration: 3s;
 }
 @keyframes fade-in {
-  /*   from {
-    color: #004;
-  }
-  to {
-    color: rgba(13, 130, 255, 1);
-  } */
   0% {
     color: #004;
   }
@@ -82,7 +76,6 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /*   transform:translateY(-50%) */
   width: 90%;
   max-width: 16rem;
   background-color: rgba(0, 0, 0, 0.65);
@@ -141,9 +134,9 @@ body {
 }
 
 /*
-#############################
-#########  NAVMENU  #########
-#############################
+##########################################################
+####################     NAVMENU     #####################
+##########################################################
 */
 
 .navmenu {
@@ -151,14 +144,21 @@ body {
   flex-wrap: nowrap;
   align-items: stretch;
   border: 2px solid rgba(13, 130, 255);
+  margin: 4rem auto;
+  animation: zoom-in 3s;
+  /*
+  --navmenu-x variable is based on the viewport width (vw) and is
+  set in the media queries section. Width, height, border radius,
+  and margins for the navmenu - container and menu items - are all
+  calculated using this variable. This allows for optimal responsiveness.
+  If the navmenu gets too huge or tiny), I can simply create a breakpoint
+  and change the --navmenu-x variable value.
+  */
   border-radius: calc(var(--navmenu-x) * 0.125);
   width: calc(var(--navmenu-x) * .88);
   height: calc(var(--navmenu-x) * .12);
-  margin: 4rem auto;
   padding: calc(var(--navmenu-x) * .01);
-  animation: zoom-in 3s;
 }
-
 @keyframes zoom-in {
   0% {
     transform: scale(0, 0);
@@ -179,9 +179,11 @@ body {
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  width: calc(var(--navmenu-x) * .125);
+  /* See note above regarding calculations */
+  width: calc(var(--navmenu-x) * .062);
+  height: calc(var(--navmenu-x) * .8);
+  margin: calc(var(--navmenu-x) * -.01) calc(var(--navmenu-x) * .021);
   padding: calc(var(--navmenu-x) * .0112);
-  height: calc(var(--navmenu-x) * 1.25);
   background-size: calc(var(--navmenu-x) * 0.108);
 }
 
@@ -190,47 +192,16 @@ body {
   display: flex;
   flex-direction: column;
   background-color: rgba(13,130,255);
-  width: calc(var(--navmenu-x) / 8);
-  height: calc(var(--navmenu-x) / 8);
-  border-radius: calc(var(--navmenu-x) / 16);
+  width: calc(var(--navmenu-x) * .105);
+  height: calc(var(--navmenu-x) * .105);
+  border-radius: calc(var(--navmenu-x) * .055);
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
-  background-size: calc(var(--navmenu-x) * 0.108);
-  border-radius: calc(var(--navmenu-x) / 16);  
+  background-size: calc(var(--navmenu-x) * .1);
 }
 
-/****************************************************
-*****************************************************
-*****************************************************
-*****************************************************
-*****************************************************
-****************************************************/
-
-  .nav__menu-item {
-    width: calc(var(--navmenu-x) * .062);
-    height: calc(var(--navmenu-x) * .8);
-    margin: calc(var(--navmenu-x) * -.01) calc(var(--navmenu-x) * .021);
-    margin: calc(var(--navmenu-x) * -.01) calc(var(--navmenu-x) * .021);
-  }
-
-  .nav__menu-item a {
-    width: calc(var(--navmenu-x) * .105);
-    height: calc(var(--navmenu-x) * .105);
-    border-radius: calc(var(--navmenu-x) * .055);
-    background-size: calc(var(--navmenu-x) * .1);
-  }
-
-
-/*************************************************************
-*************************************************************
-*************************************************************
-*************************************************************
-**************************************************************
-*************************************************************/
-
 .nav__menu-item span {
-/*   border: 1px dotted #f80; */
   display: flex;
   flex-direction: column;
   width: 24vw;
@@ -244,7 +215,7 @@ body {
 }
 
 .nav__menu-item--music a {
-  background-image: url("https://raw.githubusercontent.com/don-ferris/donferris.me/main/assets/images/turntable.png");
+  background-image: url("assets/images/turntable.png");
   background-position-x: 0.2vw;
 }
 .nav__menu-item--music a:hover {
@@ -257,7 +228,7 @@ body {
 }
 
 .nav__menu-item--home-theater a {
-  background-image: url("https://raw.githubusercontent.com/don-ferris/donferris.me/main/assets/images/home.theater.png");
+  background-image: url("assets/images/home.theater.png");
   background-position-x: 0.2vw;
 }
 .nav__menu-item--home-theater a:hover {
@@ -270,8 +241,7 @@ body {
 }
 
 .nav__menu-item--itpro a {
-  background-image: url("https://raw.githubusercontent.com/don-ferris/donferris.me/main/assets/images/it.pro.png");
-/*   background-position-x: 0.2vw; */
+  background-image: url("assets/images/it.pro.png");
 }
 .nav__menu-item--itpro a:hover {
   perspective: 1000px;
@@ -283,8 +253,7 @@ body {
 }
 
 .nav__menu-item--webdev a {
-  background-image: url("https://raw.githubusercontent.com/don-ferris/donferris.me/main/assets/images/webdev.png");
-/*   background-position-x: 0.2vw; */
+  background-image: url("assets/images/webdev.png");
 }
 .nav__menu-item--webdev a:hover {
   perspective: 1000px;
@@ -296,8 +265,7 @@ body {
 }
 
 .nav__menu-item--techfan a {
-  background-image: url("https://raw.githubusercontent.com/don-ferris/donferris.me/main/assets/images/tech.png");
-/*   background-position-x: 0.2vw; */
+  background-image: url("assets/images/tech.png");
 }
 .nav__menu-item--techfan a:hover {
   perspective: 1000px;
@@ -309,21 +277,7 @@ body {
 }
 
 .nav__menu-item--smarthome a {
-  background-image: url("https://raw.githubusercontent.com/don-ferris/donferris.me/main/assets/images/smarthome.png");
-/*   background-position-x: 0.2vw; */
-}
-.nav__menu-item--smarthome a:hover {
-  perspective: 1000px;
-  transform: rotateY(359deg);
-  transition: 0.6s;
-}
-.nav__menu-item--smarthome:hover span {
-  visibility: visible;
-}
-
-.nav__menu-item--smarthome a {
-  background-image: url("https://raw.githubusercontent.com/don-ferris/donferris.me/main/assets/images/smarthome.png");
-/*   background-position-x: 0.2vw; */
+  background-image: url("assets/images/smarthome.png");
 }
 .nav__menu-item--smarthome a:hover {
   perspective: 1000px;
@@ -335,8 +289,7 @@ body {
 }
 
 .nav__menu-item--me a {
-  background-image: url("https://raw.githubusercontent.com/don-ferris/donferris.me/main/assets/images/human.being.png");
-/*   background-position-x: 0.2vw; */
+  background-image: url("assets/images/human.being.png");
 }
 .nav__menu-item--me a:hover {
   perspective: 1000px;
@@ -348,8 +301,6 @@ body {
 }
 
 
-
-
 /*
 ##########################################
 ########  SITE MENU MEDIA QUERIES ########
@@ -358,9 +309,7 @@ body {
 
 
 /*
-##########################################
-########           < 340          ########
-##########################################
+################      < 340px      ############################################################################################
 */
 
 @media (width < 340px) {
@@ -384,9 +333,7 @@ body {
 }
 
 /*
-##########################################
-########        340 - 480         ########
-##########################################
+################      340 - 480px      ############################################################################################
 */
 
 @media (width >= 340px) AND (width < 480px) {
@@ -402,9 +349,7 @@ body {
 }
 
 /*
-##########################################
-########        480 - 640         ########
-##########################################
+################      480 - 640px      ############################################################################################
 */
 
 @media (width >= 480px) AND (width < 640px) {
@@ -421,9 +366,8 @@ body {
 
 
 /*
-##########################################
-########          > 640           ########
-##########################################
+################      > 640px      ####################################################################################################
+        Use hard coded px values above 640px so the menu doesn't get huge on large screens.
 */
 
 @media (width >= 640px) {
