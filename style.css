@@ -175,7 +175,7 @@ body {
 .nav__menu-item {
   display: flex;
   flex-direction: column;
-  justify-content: stretch;
+/*   justify-content: stretch; */
   justify-content: flex-start;
   align-items: center;
   text-align: center;
@@ -192,12 +192,12 @@ body {
   display: flex;
   flex-direction: column;
   background-color: rgba(13,130,255);
-  width: calc(var(--navmenu-x) * .105);
-  height: calc(var(--navmenu-x) * .105);
-  border-radius: calc(var(--navmenu-x) * .055);
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
+  width: calc(var(--navmenu-x) * .105);
+  height: calc(var(--navmenu-x) * .105);
+  border-radius: calc(var(--navmenu-x) * .055);
   background-size: calc(var(--navmenu-x) * .1);
 }
 
@@ -215,7 +215,7 @@ body {
 }
 
 .nav__menu-item--music a {
-  background-image: url("assets/images/turntable.png");
+  background-image: url("https://github.com/octaviomasomenos/personal-website/raw/main/assets/images/turntable.png");
   background-position-x: 0.2vw;
 }
 .nav__menu-item--music a:hover {
@@ -228,7 +228,7 @@ body {
 }
 
 .nav__menu-item--home-theater a {
-  background-image: url("assets/images/home.theater.png");
+  background-image: url("https://github.com/octaviomasomenos/personal-website/raw/main/assets/images/home.theater.png");
   background-position-x: 0.2vw;
 }
 .nav__menu-item--home-theater a:hover {
@@ -241,7 +241,7 @@ body {
 }
 
 .nav__menu-item--itpro a {
-  background-image: url("assets/images/it.pro.png");
+  background-image: url("https://github.com/octaviomasomenos/personal-website/raw/main/assets/images/it.pro.png");
 }
 .nav__menu-item--itpro a:hover {
   perspective: 1000px;
@@ -253,7 +253,7 @@ body {
 }
 
 .nav__menu-item--webdev a {
-  background-image: url("assets/images/webdev.png");
+  background-image: url("https://github.com/octaviomasomenos/personal-website/raw/main/assets/images/webdev.png");
 }
 .nav__menu-item--webdev a:hover {
   perspective: 1000px;
@@ -265,7 +265,7 @@ body {
 }
 
 .nav__menu-item--techfan a {
-  background-image: url("assets/images/tech.png");
+  background-image: url("https://github.com/octaviomasomenos/personal-website/raw/main/assets/images/tech.png");
 }
 .nav__menu-item--techfan a:hover {
   perspective: 1000px;
@@ -277,7 +277,7 @@ body {
 }
 
 .nav__menu-item--smarthome a {
-  background-image: url("assets/images/smarthome.png");
+  background-image: url("https://github.com/octaviomasomenos/personal-website/raw/main/assets/images/smarthome.png");
 }
 .nav__menu-item--smarthome a:hover {
   perspective: 1000px;
@@ -289,7 +289,7 @@ body {
 }
 
 .nav__menu-item--me a {
-  background-image: url("assets/images/human.being.png");
+  background-image: url("https://github.com/octaviomasomenos/personal-website/raw/main/assets/images/human.being.png");
 }
 .nav__menu-item--me a:hover {
   perspective: 1000px;
@@ -317,6 +317,28 @@ body {
     --navmenu-x: 100vw;
   }
   
+  .navmenu {
+    border-radius: calc(100vw * 0.125);
+    width: calc(100vw * .88);
+    height: calc(100vw * .12);
+    padding: calc(100vw * .01);
+  }
+  
+  .nav__menu-item {
+    width: calc(100vw * .062);
+    height: calc(100vw * .8);
+    margin: calc(100vw * -.01) calc(100vw * .021);
+    padding: calc(100vw * .0112);
+    background-size: calc(100vw * 0.108);
+  }
+  
+  .nav__menu-item a {
+    width: calc(100vw * .105);
+    height: calc(100vw * .105);
+    border-radius: calc(100vw * .055);
+    background-size: calc(100vw * .1);
+  }
+  
   .nav__menu-item span {
     margin-top:1rem;
   }
@@ -341,6 +363,28 @@ body {
     --navmenu-x: 85vw;
   }
   
+  .navmenu {
+    border-radius: calc(85vw * 0.125);
+    width: calc(85vw * .88);
+    height: calc(85vw * .12);
+    padding: calc(85vw * .01);
+  }
+  
+  .nav__menu-item {
+    width: calc(85vw * .062);
+    height: calc(85vw * .8);
+    margin: calc(85vw * -.01) calc(85vw * .021);
+    padding: calc(85vw * .0112);
+    background-size: calc(85vw * 0.108);
+  }
+  
+  .nav__menu-item a {
+    width: calc(85vw * .105);
+    height: calc(85vw * .105);
+    border-radius: calc(85vw * .055);
+    background-size: calc(85vw * .1);
+  }
+  
   .nav__menu-item span {
     font-size: .9rem;
 /*     margin-top:1rem; */
@@ -355,6 +399,28 @@ body {
 @media (width >= 480px) AND (width < 640px) {
   :root {
     --navmenu-x: 70vw;
+  }
+  
+  .navmenu {
+    border-radius: calc(70vw * 0.125);
+    width: calc(70vw * .88);
+    height: calc(70vw * .12);
+    padding: calc(70vw * .01);
+  }
+  
+  .nav__menu-item {
+    width: calc(70vw * .062);
+    height: calc(70vw * .8);
+    margin: calc(70vw * -.01) calc(70vw * .021);
+    padding: calc(70vw * .0112);
+    background-size: calc(70vw * 0.108);
+  }
+  
+  .nav__menu-item a {
+    width: calc(70vw * .105);
+    height: calc(70vw * .105);
+    border-radius: calc(70vw * .055);
+    background-size: calc(70vw * .1);
   }
   
   .nav__menu-item span {
