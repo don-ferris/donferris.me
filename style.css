@@ -160,10 +160,10 @@ body {
   and replacing them with hard-coded vw values to try to fix the problems in iOS.
   */
 
-  /* border-radius: calc(var(--navmenu-x) * 0.125);
+  border-radius: calc(var(--navmenu-x) * 0.125);
   width: calc(var(--navmenu-x) * .88);
   height: calc(var(--navmenu-x) * .12);
-  padding: calc(var(--navmenu-x) * .01); */
+  padding: calc(var(--navmenu-x) * .01);
 }
 @keyframes zoom-in {
   0% {
@@ -192,11 +192,11 @@ body {
   and replacing them with hard-coded vw values to try to fix the problems in iOS.
   */
   
-  /* width: calc(var(--navmenu-x) * .062);
+  width: calc(var(--navmenu-x) * .062);
   height: calc(var(--navmenu-x) * .8);
   margin: calc(var(--navmenu-x) * -.01) calc(var(--navmenu-x) * .021);
   padding: calc(var(--navmenu-x) * .0112);
-  background-size: calc(var(--navmenu-x) * 0.108); */
+  background-size: calc(var(--navmenu-x) * 0.108);
 }
 
 .nav__menu-item a {
@@ -213,10 +213,10 @@ body {
   and replacing them with hard-coded vw values to try to fix the problems in iOS.
   */
   
-  /* width: calc(var(--navmenu-x) * .105);
+  width: calc(var(--navmenu-x) * .105);
   height: calc(var(--navmenu-x) * .105);
   border-radius: calc(var(--navmenu-x) * .055);
-  background-size: calc(var(--navmenu-x) * .1); */
+  background-size: calc(var(--navmenu-x) * .1);
 }
 
 .nav__menu-item span {
@@ -376,25 +376,25 @@ body {
   }
   
   .navmenu {
-    border-radius: calc(70vw * 0.125);
+    /* border-radius: calc(70vw * 0.125);
     width: calc(70vw * .88);
     height: calc(70vw * .12);
-    padding: calc(70vw * .01);
+    padding: calc(70vw * .01); */
   }
   
   .nav__menu-item {
-    width: calc(70vw * .062);
+    /* width: calc(70vw * .062);
     height: calc(70vw * .8);
     margin: calc(70vw * -.01) calc(70vw * .021);
     padding: calc(70vw * .0112);
-    background-size: calc(70vw * 0.108);
+    background-size: calc(70vw * 0.108); */
   }
   
   .nav__menu-item a {
-    width: calc(70vw * .105);
+    /* width: calc(70vw * .105);
     height: calc(70vw * .105);
     border-radius: calc(70vw * .055);
-    background-size: calc(70vw * .1);
+    background-size: calc(70vw * .1); */
   }
   
   .nav__menu-item span {
@@ -419,25 +419,25 @@ body {
   }
   
   .navmenu {
-    border-radius: calc(85vw * 0.125);
+    /* border-radius: calc(85vw * 0.125);
     width: calc(85vw * .88);
     height: calc(85vw * .12);
-    padding: calc(85vw * .01);
+    padding: calc(85vw * .01); */
   }
   
   .nav__menu-item {
-    width: calc(85vw * .062);
+    /* width: calc(85vw * .062);
     height: calc(85vw * .8);
     margin: calc(85vw * -.01) calc(85vw * .021);
     padding: calc(85vw * .0112);
-    background-size: calc(85vw * 0.108);
+    background-size: calc(85vw * 0.108); */
   }
   
   .nav__menu-item a {
-    width: calc(85vw * .105);
+    /* width: calc(85vw * .105);
     height: calc(85vw * .105);
     border-radius: calc(85vw * .055);
-    background-size: calc(85vw * .1);
+    background-size: calc(85vw * .1); */
   }
   
   .nav__menu-item span {
@@ -463,10 +463,10 @@ body {
   }
   
   .navmenu {
-    border-radius: calc(100vw * 0.125);
+    /* border-radius: calc(100vw * 0.125);
     width: calc(100vw * .88);
     height: calc(100vw * .12);
-    padding: calc(100vw * .01);
+    padding: calc(100vw * .01); */
   }
   
   .nav__menu-item {
@@ -478,10 +478,10 @@ body {
   }
   
   .nav__menu-item a {
-    width: calc(100vw * .105);
+    /* width: calc(100vw * .105);
     height: calc(100vw * .105);
     border-radius: calc(100vw * .055);
-    background-size: calc(100vw * .1);
+    background-size: calc(100vw * .1); */
   }
   
   .nav__menu-item span {
