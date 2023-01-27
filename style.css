@@ -139,7 +139,7 @@ body {
 ##########################################################
 */
 
-.navmenu {
+.nav-menu {
   display: flex;
   flex-wrap: nowrap;
   align-items: stretch;
@@ -153,17 +153,17 @@ body {
   calculated using this variable. This allows for optimal responsiveness.
   If the navmenu gets too huge or tiny), I can simply create a breakpoint
   and change the --navmenu-x variable value.
-  */
-
-  /*
+  
+  ^ Above was problematic on iOS - disregard.
+  
   Section below is replaced in each breakpoint, removing the variable calculations 
   and replacing them with hard-coded vw values to try to fix the problems in iOS.
-  */
 
   border-radius: calc(var(--navmenu-x) * 0.125);
   width: calc(var(--navmenu-x) * .88);
   height: calc(var(--navmenu-x) * .12);
   padding: calc(var(--navmenu-x) * .01);
+  */
 }
 @keyframes zoom-in {
   0% {
@@ -185,18 +185,16 @@ body {
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  /* See note above regarding calculations */
-
   /*
   Section below is replaced in each breakpoint, removing the variable calculations 
   and replacing them with hard-coded vw values to try to fix the problems in iOS.
-  */
   
   width: calc(var(--navmenu-x) * .062);
   height: calc(var(--navmenu-x) * .8);
   margin: calc(var(--navmenu-x) * -.01) calc(var(--navmenu-x) * .021);
   padding: calc(var(--navmenu-x) * .0112);
   background-size: calc(var(--navmenu-x) * 0.108);
+  */
 }
 
 .nav__menu-item a {
@@ -211,12 +209,11 @@ body {
   /*
   Section below is replaced in each breakpoint, removing the variable calculations 
   and replacing them with hard-coded vw values to try to fix the problems in iOS.
-  */
   
   width: calc(var(--navmenu-x) * .105);
   height: calc(var(--navmenu-x) * .105);
   border-radius: calc(var(--navmenu-x) * .055);
-  background-size: calc(var(--navmenu-x) * .1);
+  background-size: calc(var(--navmenu-x) * .1); */
 }
 
 .nav__menu-item span {
@@ -232,89 +229,89 @@ body {
   visibility: hidden;
 }
 
-.nav__menu-item--music a {
-  background-image: url("https://github.com/octaviomasomenos/personal-website/raw/main/assets/images/turntable.png");
+.nav--music a {
+  background-image: url("https://github.com/don-ferris/donferris.me/raw/main/assets/images/turntable.png");
   background-position-x: 0.2vw;
 }
-.nav__menu-item--music a:hover {
+.nav--music a:hover {
   perspective: 1000px;
   transform: rotateY(359deg);
   transition: 0.6s;
 }
-.nav__menu-item--music:hover span {
+.nav--music:hover span {
   visibility: visible;
 }
 
-.nav__menu-item--home-theater a {
-  background-image: url("https://github.com/octaviomasomenos/personal-website/raw/main/assets/images/home.theater.png");
+.nav--home-theater a {
+  background-image: url("https://github.com/don-ferris/donferris.me/raw/main/assets/images/home.theater.png");
   background-position-x: 0.2vw;
 }
-.nav__menu-item--home-theater a:hover {
+.nav--home-theater a:hover {
   perspective: 1000px;
   transform: rotateY(359deg);
   transition: 0.6s;
 }
-.nav__menu-item--home-theater:hover span {
+.nav--home-theater:hover span {
   visibility: visible;
 }
 
-.nav__menu-item--itpro a {
-  background-image: url("https://github.com/octaviomasomenos/personal-website/raw/main/assets/images/it.pro.png");
+.nav--itpro a {
+  background-image: url("https://github.com/don-ferris/donferris.me/raw/main/assets/images/it.pro.png");
 }
-.nav__menu-item--itpro a:hover {
+.nav--itpro a:hover {
   perspective: 1000px;
   transform: rotateY(359deg);
   transition: 0.6s;
 }
-.nav__menu-item--itpro:hover span {
+.nav--itpro:hover span {
   visibility: visible;
 }
 
-.nav__menu-item--webdev a {
-  background-image: url("https://github.com/octaviomasomenos/personal-website/raw/main/assets/images/webdev.png");
+.nav--webdev a {
+  background-image: url("https://github.com/don-ferris/donferris.me/raw/main/assets/images/webdev.png");
 }
-.nav__menu-item--webdev a:hover {
+.nav--webdev a:hover {
   perspective: 1000px;
   transform: rotateY(359deg);
   transition: 0.6s;
 }
-.nav__menu-item--webdev:hover span {
+.nav--webdev:hover span {
   visibility: visible;
 }
 
-.nav__menu-item--techfan a {
-  background-image: url("https://github.com/octaviomasomenos/personal-website/raw/main/assets/images/tech.png");
+.nav--techfan a {
+  background-image: url("https://github.com/don-ferris/donferris.me/raw/main/assets/images/tech.png");
 }
-.nav__menu-item--techfan a:hover {
+.nav--techfan a:hover {
   perspective: 1000px;
   transform: rotateY(359deg);
   transition: 0.6s;
 }
-.nav__menu-item--techfan:hover span {
+.nav--techfan:hover span {
   visibility: visible;
 }
 
-.nav__menu-item--smarthome a {
-  background-image: url("https://github.com/octaviomasomenos/personal-website/raw/main/assets/images/smarthome.png");
+.nav--smarthome a {
+  background-image: url("https://github.com/don-ferris/donferris.me/raw/main/assets/images/smarthome.png");
 }
-.nav__menu-item--smarthome a:hover {
+.nav--smarthome a:hover {
   perspective: 1000px;
   transform: rotateY(359deg);
   transition: 0.6s;
 }
-.nav__menu-item--smarthome:hover span {
+.nav--smarthome:hover span {
   visibility: visible;
 }
 
-.nav__menu-item--me a {
-  background-image: url("https://github.com/octaviomasomenos/personal-website/raw/main/assets/images/human.being.png");
+.nav--personal a {
+  background-image: url("https://github.com/don-ferris/donferris.me/raw/main/assets/images/human.being.png");
 }
-.nav__menu-item--me a:hover {
+.nav--personal a:hover {
   perspective: 1000px;
   transform: rotateY(359deg);
   transition: 0.6s;
 }
-.nav__menu-item--me:hover span {
+.nav--personal:hover span {
   visibility: visible;
 }
 
@@ -336,7 +333,7 @@ body {
     font-size: 6rem;
   }
 
-  .navmenu {
+  .nav-menu {
     width: 380px;
     height: 58px;
     margin: 4rem auto;
@@ -375,30 +372,30 @@ body {
     font-size: clamp(2.5rem, 14vw * 0.75, 4.5rem);
   }
   
-  .navmenu {
-    /* border-radius: calc(70vw * 0.125);
+  .nav-menu {
+    border-radius: calc(70vw * 0.125);
     width: calc(70vw * .88);
     height: calc(70vw * .12);
-    padding: calc(70vw * .01); */
+    padding: calc(70vw * .01);
   }
   
   .nav__menu-item {
-    /* width: calc(70vw * .062);
+    width: calc(70vw * .062);
     height: calc(70vw * .8);
     margin: calc(70vw * -.01) calc(70vw * .021);
     padding: calc(70vw * .0112);
-    background-size: calc(70vw * 0.108); */
+    background-size: calc(70vw * 0.108);
   }
   
   .nav__menu-item a {
-    /* width: calc(70vw * .105);
+    width: calc(70vw * .105);
     height: calc(70vw * .105);
     border-radius: calc(70vw * .055);
-    background-size: calc(70vw * .1); */
+    background-size: calc(70vw * .1);
   }
   
   .nav__menu-item span {
-    font-size: .9rem;
+    font-size: 1rem;
     margin-top:1.2rem;
     width: 36vw;
   }
@@ -418,30 +415,30 @@ body {
     font-size: clamp(2.5rem, 14vw * 0.75, 4.5rem);
   }
   
-  .navmenu {
-    /* border-radius: calc(85vw * 0.125);
+  .nav-menu {
+    border-radius: calc(85vw * 0.125);
     width: calc(85vw * .88);
     height: calc(85vw * .12);
-    padding: calc(85vw * .01); */
+    padding: calc(85vw * .01);
   }
   
   .nav__menu-item {
-    /* width: calc(85vw * .062);
+    width: calc(85vw * .062);
     height: calc(85vw * .8);
     margin: calc(85vw * -.01) calc(85vw * .021);
     padding: calc(85vw * .0112);
-    background-size: calc(85vw * 0.108); */
+    background-size: calc(85vw * 0.108);
   }
   
   .nav__menu-item a {
-    /* width: calc(85vw * .105);
+    width: calc(85vw * .105);
     height: calc(85vw * .105);
     border-radius: calc(85vw * .055);
-    background-size: calc(85vw * .1); */
+    background-size: calc(85vw * .1);
   }
   
   .nav__menu-item span {
-    font-size: .9rem;
+    font-size: 1.1rem;
 /*     margin-top:1rem; */
     width: 32vw;
   }
@@ -462,11 +459,11 @@ body {
     font-size: clamp(2.5rem, 14vw * 0.75, 4.5rem);
   }
   
-  .navmenu {
-    /* border-radius: calc(100vw * 0.125);
+  .nav-menu {
+    border-radius: calc(100vw * 0.125);
     width: calc(100vw * .88);
     height: calc(100vw * .12);
-    padding: calc(100vw * .01); */
+    padding: calc(100vw * .01);
   }
   
   .nav__menu-item {
@@ -478,22 +475,23 @@ body {
   }
   
   .nav__menu-item a {
-    /* width: calc(100vw * .105);
+    width: calc(100vw * .105);
     height: calc(100vw * .105);
     border-radius: calc(100vw * .055);
-    background-size: calc(100vw * .1); */
+    background-size: calc(100vw * .1);
   }
   
   .nav__menu-item span {
     margin-top:1rem;
+    font-size:1.25rem;
   }
   
-  .nav__music-text {
+  .nav--music-text {
     text-align: left;
     margin-left:10vw;
   }
   
-  .nav__me-text {
+  .nav--personal-text {
     text-align: right;
     margin-left:-10vw;
   }
