@@ -158,11 +158,12 @@ body {
   
   Section below is replaced in each breakpoint, removing the variable calculations 
   and replacing them with hard-coded vw values to try to fix the problems in iOS.
-  */
+
   border-radius: calc(var(--navmenu-x) * 0.125);
   width: calc(var(--navmenu-x) * .88);
   height: calc(var(--navmenu-x) * .12);
   padding: calc(var(--navmenu-x) * .01);
+  */
 }
 @keyframes zoom-in {
   0% {
@@ -187,12 +188,13 @@ body {
   /*
   Section below is replaced in each breakpoint, removing the variable calculations 
   and replacing them with hard-coded vw values to try to fix the problems in iOS.
-  */
+  
   width: calc(var(--navmenu-x) * .062);
-  height: calc(var(--navmenu-x) * .99);
+  height: calc(var(--navmenu-x) * .8);
   margin: calc(var(--navmenu-x) * -.01) calc(var(--navmenu-x) * .021);
   padding: calc(var(--navmenu-x) * .0112);
   background-size: calc(var(--navmenu-x) * 0.108);
+  */
 }
 
 .nav__menu-item a {
@@ -207,11 +209,11 @@ body {
   /*
   Section below is replaced in each breakpoint, removing the variable calculations 
   and replacing them with hard-coded vw values to try to fix the problems in iOS.
-  */
+  
   width: calc(var(--navmenu-x) * .105);
   height: calc(var(--navmenu-x) * .105);
   border-radius: calc(var(--navmenu-x) * .055);
-  background-size: calc(var(--navmenu-x) * .1); 
+  background-size: calc(var(--navmenu-x) * .1); */
 }
 
 .nav__menu-item span {
@@ -315,38 +317,14 @@ body {
 
 
 /*
-####################################################################################
-####################################################################################
-####################################################################################
-###########################    SITE MENU MEDIA QUERIES   ###########################
-####################################################################################
-####################################################################################
-####################################################################################
+##########################################
+########  SITE MENU MEDIA QUERIES ########
+##########################################
 */
 
 /*
-        MMMMM        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM        MMMMM
-
-
-> 640px    Use hard coded px values above 640px so the menu doesn't get huge on large screens.
-
+################      > 640px      ####################################################################################################
+        Use hard coded px values above 640px so the menu doesn't get huge on large screens.
 */
 
 @media (min-width: 641px) {
@@ -381,27 +359,7 @@ body {
 }
 
 /*
-        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM
-        MMMMM        MMMMM        MMMMM
-
-
-  480 - 640px   #####################################################################################
+################      480 - 640px      ############################################################################################
 */
 
 @media (max-width: 640px) {
@@ -411,7 +369,29 @@ body {
   
   .banner {
     font-size:16vw;
-    font-size: clamp(5rem, 18vw * 0.75, 6rem);
+    font-size: clamp(2.5rem, 14vw * 0.75, 4.5rem);
+  }
+  
+  .nav-menu {
+    border-radius: calc(70vw * 0.125);
+    width: calc(70vw * .88);
+    height: calc(70vw * .12);
+    padding: calc(70vw * .01);
+  }
+  
+  .nav__menu-item {
+    width: calc(70vw * .062);
+    height: calc(70vw * .8);
+    margin: calc(70vw * -.01) calc(70vw * .021);
+    padding: calc(70vw * .0112);
+    background-size: calc(70vw * 0.108);
+  }
+  
+  .nav__menu-item a {
+    width: calc(70vw * .105);
+    height: calc(70vw * .105);
+    border-radius: calc(70vw * .055);
+    background-size: calc(70vw * .1);
   }
   
   .nav__menu-item span {
@@ -422,29 +402,7 @@ body {
 }
 
 /*
-
-/*
-        MMMMM        MMMMM
-        MMMMM        MMMMM
-        MMMMM        MMMMM
-        MMMMM        MMMMM
-        MMMMM        MMMMM
-        MMMMM        MMMMM
-        MMMMM        MMMMM
-        MMMMM        MMMMM
-        MMMMM        MMMMM
-        MMMMM        MMMMM
-        MMMMM        MMMMM
-        MMMMM        MMMMM
-        MMMMM        MMMMM
-        MMMMM        MMMMM
-        MMMMM        MMMMM
-        MMMMM        MMMMM
-        MMMMM        MMMMM
-        MMMMM        MMMMM
-
-
-  340 - 480px  ############################################################################################
+################      340 - 480px      ############################################################################################
 */
 
 @media (max-width: 480px) {
@@ -453,39 +411,42 @@ body {
   }
   
   .banner {
-    font-size:16vw;
-    font-size: clamp(3.5rem, 16vw * 0.95, 4rem);
+    font-size:19vw;
+    font-size: clamp(2.5rem, 14vw * 0.75, 4.5rem);
+  }
+  
+  .nav-menu {
+    border-radius: calc(85vw * 0.125);
+    width: calc(85vw * .88);
+    height: calc(85vw * .12);
+    padding: calc(85vw * .01);
+  }
+  
+  .nav__menu-item {
+    width: calc(85vw * .062);
+    height: calc(85vw * .8);
+    margin: calc(85vw * -.01) calc(85vw * .021);
+    padding: calc(85vw * .0112);
+    background-size: calc(85vw * 0.108);
+  }
+  
+  .nav__menu-item a {
+    width: calc(85vw * .105);
+    height: calc(85vw * .105);
+    border-radius: calc(85vw * .055);
+    background-size: calc(85vw * .1);
   }
   
   .nav__menu-item span {
     font-size: 1.1rem;
+/*     margin-top:1rem; */
     width: 32vw;
   }
 }
 
 
 /*
-        MMMMM
-        MMMMM
-        MMMMM
-        MMMMM
-        MMMMM
-        MMMMM
-        MMMMM
-        MMMMM
-        MMMMM
-        MMMMM
-        MMMMM
-        MMMMM
-        MMMMM
-        MMMMM
-        MMMMM
-        MMMMM
-        MMMMM
-        MMMMM
-
-
-  < 340px   ############################################################################################
+################      < 340px      ############################################################################################
 */
 
 @media (max-width: 340px) {
@@ -498,6 +459,28 @@ body {
     font-size: clamp(2.5rem, 14vw * 0.75, 4.5rem);
   }
   
+  .nav-menu {
+    border-radius: calc(100vw * 0.125);
+    width: calc(100vw * .88);
+    height: calc(100vw * .12);
+    padding: calc(100vw * .01);
+  }
+  
+  .nav__menu-item {
+    width: calc(100vw * .062);
+    height: calc(100vw * .8);
+    margin: calc(100vw * -.01) calc(100vw * .021);
+    padding: calc(100vw * .0112);
+    background-size: calc(100vw * 0.108);
+  }
+  
+  .nav__menu-item a {
+    width: calc(100vw * .105);
+    height: calc(100vw * .105);
+    border-radius: calc(100vw * .055);
+    background-size: calc(100vw * .1);
+  }
+  
   .nav__menu-item span {
     margin-top:1rem;
     font-size:1.25rem;
@@ -505,11 +488,11 @@ body {
   
   .nav--music-text {
     text-align: left;
-    margin-left:15vw;
+    margin-left:10vw;
   }
   
   .nav--personal-text {
     text-align: right;
-    margin-left:-24vw;
+    margin-left:-10vw;
   }
 }
