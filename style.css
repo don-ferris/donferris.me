@@ -325,14 +325,141 @@ body {
 ##########################################
 */
 
+/*
+################      > 640px      ####################################################################################################
+        Use hard coded px values above 640px so the menu doesn't get huge on large screens.
+*/
+
+@media (min-width: 641px) {
+  
+  .banner {
+    font-size: 6rem;
+  }
+
+  .navmenu {
+    width: 380px;
+    height: 58px;
+    margin: 4rem auto;
+    border-radius:30px;
+  }
+
+  .nav__menu-item {
+    width: 44px;
+    padding: 5px;
+    height: 180px;
+  }
+
+  .nav__menu-item a {
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+    background-size: 40px;  
+  }
+
+  .nav__menu-item span {
+    width:200px;
+  }
+}
+
+/*
+################      480 - 640px      ############################################################################################
+*/
+
+@media (max-width: 640px) {
+  :root {
+    --navmenu-x: 70vw;
+  }
+  
+  .banner {
+    font-size:16vw;
+    font-size: clamp(2.5rem, 14vw * 0.75, 4.5rem);
+  }
+  
+  .navmenu {
+    border-radius: calc(70vw * 0.125);
+    width: calc(70vw * .88);
+    height: calc(70vw * .12);
+    padding: calc(70vw * .01);
+  }
+  
+  .nav__menu-item {
+    width: calc(70vw * .062);
+    height: calc(70vw * .8);
+    margin: calc(70vw * -.01) calc(70vw * .021);
+    padding: calc(70vw * .0112);
+    background-size: calc(70vw * 0.108);
+  }
+  
+  .nav__menu-item a {
+    width: calc(70vw * .105);
+    height: calc(70vw * .105);
+    border-radius: calc(70vw * .055);
+    background-size: calc(70vw * .1);
+  }
+  
+  .nav__menu-item span {
+    font-size: .9rem;
+    margin-top:1.2rem;
+    width: 36vw;
+  }
+}
+
+/*
+################      340 - 480px      ############################################################################################
+*/
+
+@media (max-width: 480px) {
+  :root {
+    --navmenu-x: 85vw;
+  }
+  
+  .banner {
+    font-size:19vw;
+    font-size: clamp(2.5rem, 14vw * 0.75, 4.5rem);
+  }
+  
+  .navmenu {
+    border-radius: calc(85vw * 0.125);
+    width: calc(85vw * .88);
+    height: calc(85vw * .12);
+    padding: calc(85vw * .01);
+  }
+  
+  .nav__menu-item {
+    width: calc(85vw * .062);
+    height: calc(85vw * .8);
+    margin: calc(85vw * -.01) calc(85vw * .021);
+    padding: calc(85vw * .0112);
+    background-size: calc(85vw * 0.108);
+  }
+  
+  .nav__menu-item a {
+    width: calc(85vw * .105);
+    height: calc(85vw * .105);
+    border-radius: calc(85vw * .055);
+    background-size: calc(85vw * .1);
+  }
+  
+  .nav__menu-item span {
+    font-size: .9rem;
+/*     margin-top:1rem; */
+    width: 32vw;
+  }
+}
+
 
 /*
 ################      < 340px      ############################################################################################
 */
 
-@media (width < 340px) {
+@media (max-width: 340px) {
   :root {
     --navmenu-x: 100vw;
+  }
+  
+  .banner {
+    font-size:22vw;
+    font-size: clamp(2.5rem, 14vw * 0.75, 4.5rem);
   }
   
   .navmenu {
@@ -369,113 +496,5 @@ body {
   .nav__me-text {
     text-align: right;
     margin-left:-10vw;
-  }
-}
-
-/*
-################      340 - 480px      ############################################################################################
-*/
-
-@media (width >= 340px) AND (width < 480px) {
-  :root {
-    --navmenu-x: 85vw;
-  }
-  
-  .navmenu {
-    border-radius: calc(85vw * 0.125);
-    width: calc(85vw * .88);
-    height: calc(85vw * .12);
-    padding: calc(85vw * .01);
-  }
-  
-  .nav__menu-item {
-    width: calc(85vw * .062);
-    height: calc(85vw * .8);
-    margin: calc(85vw * -.01) calc(85vw * .021);
-    padding: calc(85vw * .0112);
-    background-size: calc(85vw * 0.108);
-  }
-  
-  .nav__menu-item a {
-    width: calc(85vw * .105);
-    height: calc(85vw * .105);
-    border-radius: calc(85vw * .055);
-    background-size: calc(85vw * .1);
-  }
-  
-  .nav__menu-item span {
-    font-size: .9rem;
-/*     margin-top:1rem; */
-    width: 32vw;
-  }
-}
-
-/*
-################      480 - 640px      ############################################################################################
-*/
-
-@media (width >= 480px) AND (width < 640px) {
-  :root {
-    --navmenu-x: 70vw;
-  }
-  
-  .navmenu {
-    border-radius: calc(70vw * 0.125);
-    width: calc(70vw * .88);
-    height: calc(70vw * .12);
-    padding: calc(70vw * .01);
-  }
-  
-  .nav__menu-item {
-    width: calc(70vw * .062);
-    height: calc(70vw * .8);
-    margin: calc(70vw * -.01) calc(70vw * .021);
-    padding: calc(70vw * .0112);
-    background-size: calc(70vw * 0.108);
-  }
-  
-  .nav__menu-item a {
-    width: calc(70vw * .105);
-    height: calc(70vw * .105);
-    border-radius: calc(70vw * .055);
-    background-size: calc(70vw * .1);
-  }
-  
-  .nav__menu-item span {
-    font-size: .9rem;
-    margin-top:1.2rem;
-    width: 36vw;
-  }
-}
-
-
-/*
-################      > 640px      ####################################################################################################
-        Use hard coded px values above 640px so the menu doesn't get huge on large screens.
-*/
-
-@media (width >= 640px) {
-  .navmenu {
-    width: 380px;
-    height: 58px;
-    margin: 4rem auto;
-    border-radius:30px;
-  }
-
-  .nav__menu-item {
-    width: 44px;
-    padding: 5px;
-    height: 180px;
-  }
-
-  .nav__menu-item a {
-    width: 44px;
-    height: 44px;
-    border-radius: 22px;
-    background-size: 40px;  
-  }
-
-  .nav__menu-item span {
-    width:200px;
   }
 }
