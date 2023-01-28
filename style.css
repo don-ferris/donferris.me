@@ -219,8 +219,12 @@ body {
   visibility: hidden;
 }
 
+.nav__menu-item a:visited {
+  color: #aaa;
+}
+
 .nav__menu-item:hover a {
-  visibility:visible;
+  /* visibility:visible; */
   animation:pulse 2s ease infinite;
 }
 
@@ -259,10 +263,9 @@ body {
 }
 .nav--music:hover a {
   visibility: visible;
-  animation pulse 2.5s ease 3;
 }
 .nav--music a:hover {
-  color:#dd0;
+  /* color:#dd0; */
 }
 
 .nav--home-theater .menu-icon {
@@ -278,8 +281,7 @@ body {
   visibility: visible;
 }
 .nav--home-theater a:hover {
-/*   visibility: visible; */
-  color:#dd0;
+  /* color:#dd0; */
 }
 
 .nav--itpro  .menu-icon {
@@ -294,7 +296,7 @@ body {
   visibility: visible;
 }
 .nav--itpro a:hover {
-  color: #ff0;
+  /* color: #ff0; */
 }
 
 .nav--webdev .menu-icon {
@@ -309,7 +311,7 @@ body {
   visibility: visible;
 }
 .nav--webdev a:hover {
-  color: #ff0;
+  /* color: #ff0; */
 }
 
 .nav--techfan .menu-icon {
@@ -324,7 +326,7 @@ body {
   visibility: visible;
 }
 .nav--techfan a:hover {
-  color: #ff0;
+  /* color: #ff0; */
 }
 
 .nav--smarthome .menu-icon {
@@ -339,7 +341,7 @@ body {
   visibility: visible;
 }
 .nav--smarthome a:hover {
-  color: #ff0;
+  /* color: #ff0; */
 }
 
 .nav--personal .menu-icon {
@@ -354,7 +356,7 @@ body {
   visibility: visible;
 }
 .nav--personal a:hover {
-  color: #ff0;
+  /* color: #ff0; */
 }
 
 /*
