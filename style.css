@@ -6,6 +6,7 @@ body {
 }
 
 .banner {
+  margin-top: calc(var(--navmenu-x) * .15);
   font-size: clamp(2.5rem, 14vw * 0.75, 4.5rem);
   padding: 2rem 0;
   width: 100%;
@@ -150,14 +151,7 @@ body {
   --navmenu-x variable is based on the viewport width (vw) and is
   set in the media queries section. Width, height, border radius,
   and margins for the navmenu - container and menu items - are all
-  calculated using this variable. This allows for optimal responsiveness.
-  If the navmenu gets too huge or tiny), I can simply create a breakpoint
-  and change the --navmenu-x variable value.
-  
-  ^ Above was problematic on iOS - disregard.
-  
-  Section below is replaced in each breakpoint, removing the variable calculations 
-  and replacing them with hard-coded vw values to try to fix the problems in iOS.
+  calculated using this variable. This allows for optimal responsiveness. If the navmenu gets too huge or tiny), I can simply create a breakpoint and change the --navmenu-x variable value.
   */
   border-radius: calc(var(--navmenu-x) * 0.125);
   width: calc(var(--navmenu-x) * .88);
@@ -175,7 +169,6 @@ body {
     transform: scale(1, 1);
   }
 }
-
 
 .nav__menu-item {
   display: flex;
@@ -195,7 +188,7 @@ body {
   background-size: calc(var(--navmenu-x) * 0.108);
 }
 
-.nav__menu-item a {
+.nav__menu-item .menu-icon {
   border: 2px solid #aaa;
   display: flex;
   flex-direction: column;
@@ -203,125 +196,175 @@ body {
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
-
-  /*
-  Section below is replaced in each breakpoint, removing the variable calculations 
-  and replacing them with hard-coded vw values to try to fix the problems in iOS.
-  */
   width: calc(var(--navmenu-x) * .105);
   height: calc(var(--navmenu-x) * .105);
   border-radius: calc(var(--navmenu-x) * .055);
   background-size: calc(var(--navmenu-x) * .1); 
 }
 
-.nav__menu-item span {
+.nav__menu-item a {
   display: flex;
   flex-direction: column;
+  text-decoration:none;
   width: 24vw;
-  font-size:0.9rem;
+  font-size:1rem;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-style: italic;
   color: #aaa;
   margin-top:1.2rem;
+  padding:0.5rem;
+  border-top:1px solid rgba(255,255,0,0);
+  border-bottom:1px solid rgba(255,255,0,0);
   visibility: hidden;
 }
 
-.nav--music a {
+.nav__menu-item:hover a {
+  visibility:visible;
+  animation:pulse 2s ease infinite;
+}
+
+.nav__menu-item a:hover {
+  visibility:visible;
+  color:#ff0;
+}
+
+@keyframes pulse {
+  0% {
+    border-top:1px solid rgba(255,255,0,0.1);
+    border-bottom:1px solid rgba(255,255,0,0.1);
+  }
+  40% {
+/*     border-top:1px solid rgba(255,255,0,0.5);
+    border-bottom:1px solid rgba(255,255,0,0.5); */
+  }
+  50% {
+    border-top:1px solid rgba(255,255,0,0.5);
+    border-bottom:1px solid rgba(255,255,0,0.5);
+  }
+  100% {
+    border-top:1px solid rgba(255,255,0,0.1);
+    border-bottom:1px solid rgba(255,255,0,0.1);
+  }
+}
+
+.nav--music .menu-icon {
   background-image: url("https://github.com/don-ferris/donferris.me/raw/main/assets/images/turntable.png");
   background-position-x: 0.2vw;
 }
-.nav--music a:hover {
+.nav--music:hover .menu-icon {
   perspective: 1000px;
   transform: rotateY(359deg);
   transition: 0.6s;
 }
-.nav--music:hover span {
+.nav--music:hover a {
   visibility: visible;
+  animation pulse 2.5s ease 3;
+}
+.nav--music a:hover {
+  color:#dd0;
 }
 
-.nav--home-theater a {
+.nav--home-theater .menu-icon {
   background-image: url("https://github.com/don-ferris/donferris.me/raw/main/assets/images/home.theater.png");
   background-position-x: 0.2vw;
 }
-.nav--home-theater a:hover {
+.nav--home-theater:hover .menu-icon {
   perspective: 1000px;
   transform: rotateY(359deg);
   transition: 0.6s;
 }
-.nav--home-theater:hover span {
+.nav--home-theater:hover a {
   visibility: visible;
 }
+.nav--home-theater a:hover {
+/*   visibility: visible; */
+  color:#dd0;
+}
 
-.nav--itpro a {
+.nav--itpro  .menu-icon {
   background-image: url("https://github.com/don-ferris/donferris.me/raw/main/assets/images/it.pro.png");
 }
-.nav--itpro a:hover {
+.nav--itpro:hover  .menu-icon {
   perspective: 1000px;
   transform: rotateY(359deg);
   transition: 0.6s;
 }
-.nav--itpro:hover span {
+.nav--itpro:hover a {
   visibility: visible;
 }
+.nav--itpro a:hover {
+  color: #ff0;
+}
 
-.nav--webdev a {
+.nav--webdev .menu-icon {
   background-image: url("https://github.com/don-ferris/donferris.me/raw/main/assets/images/webdev.png");
 }
-.nav--webdev a:hover {
+.nav--webdev:hover .menu-icon {
   perspective: 1000px;
   transform: rotateY(359deg);
   transition: 0.6s;
 }
-.nav--webdev:hover span {
+.nav--webdev:hover a {
   visibility: visible;
 }
+.nav--webdev a:hover {
+  color: #ff0;
+}
 
-.nav--techfan a {
+.nav--techfan .menu-icon {
   background-image: url("https://github.com/don-ferris/donferris.me/raw/main/assets/images/tech.png");
 }
-.nav--techfan a:hover {
+.nav--techfan:hover .menu-icon {
   perspective: 1000px;
   transform: rotateY(359deg);
   transition: 0.6s;
 }
-.nav--techfan:hover span {
+.nav--techfan:hover a {
   visibility: visible;
 }
+.nav--techfan a:hover {
+  color: #ff0;
+}
 
-.nav--smarthome a {
+.nav--smarthome .menu-icon {
   background-image: url("https://github.com/don-ferris/donferris.me/raw/main/assets/images/smarthome.png");
 }
-.nav--smarthome a:hover {
+.nav--smarthome:hover .menu-icon {
   perspective: 1000px;
   transform: rotateY(359deg);
   transition: 0.6s;
 }
-.nav--smarthome:hover span {
+.nav--smarthome:hover a {
   visibility: visible;
 }
+.nav--smarthome a:hover {
+  color: #ff0;
+}
 
-.nav--personal a {
+.nav--personal .menu-icon {
   background-image: url("https://github.com/don-ferris/donferris.me/raw/main/assets/images/human.being.png");
 }
-.nav--personal a:hover {
+.nav--personal:hover .menu-icon {
   perspective: 1000px;
   transform: rotateY(359deg);
   transition: 0.6s;
 }
-.nav--personal:hover span {
+.nav--personal:hover a {
   visibility: visible;
 }
-
+.nav--personal a:hover {
+  color: #ff0;
+}
 
 /*
-####################################################################################
-####################################################################################
-####################################################################################
-###########################    SITE MENU MEDIA QUERIES   ###########################
-####################################################################################
-####################################################################################
-####################################################################################
+######################################################################
+######################################################################
+######################################################################
+####################    SITE MENU MEDIA QUERIES   ####################
+######################################################################
+######################################################################
+######################################################################
 */
 
 /*
@@ -352,7 +395,9 @@ body {
 @media (min-width: 641px) {
   
   .banner {
-    font-size: 6rem;
+    font-size: 4rem;
+    font-size: clamp(4rem, 16vw * 0.25, 6rem);
+    margin-top:3rem;
   }
 
   .nav-menu {
@@ -368,14 +413,14 @@ body {
     height: 180px;
   }
 
-  .nav__menu-item a {
+  .nav__menu-item .menu-icon {
     width: 44px;
     height: 44px;
     border-radius: 22px;
     background-size: 40px;  
   }
 
-  .nav__menu-item span {
+  .nav__menu-item a {
     width:200px;
   }
 }
@@ -410,11 +455,12 @@ body {
   }
   
   .banner {
+/*     margin-top:2rem; */
     font-size:16vw;
-    font-size: clamp(5rem, 18vw * 0.75, 6rem);
+    font-size: clamp(4rem, 16vw * 0.25, 5rem);
   }
   
-  .nav__menu-item span {
+  .nav__menu-item a {
     font-size: 1rem;
     margin-top:1.2rem;
     width: 36vw;
@@ -457,7 +503,7 @@ body {
     font-size: clamp(3.5rem, 16vw * 0.95, 4rem);
   }
   
-  .nav__menu-item span {
+  .nav__menu-item a {
     font-size: 1.1rem;
     width: 32vw;
   }
@@ -494,11 +540,15 @@ body {
   }
   
   .banner {
-    font-size:22vw;
-    font-size: clamp(2.5rem, 14vw * 0.75, 4.5rem);
+    font-size:18vw;
+    font-size: clamp(16vw, 24vw * 0.8, 18vw);
   }
   
-  .nav__menu-item span {
+  .nav__menu-item {
+    height:calc(var(--navmenu-x) * 1.25);
+  }
+  
+  .nav__menu-item a {
     margin-top:1rem;
     font-size:1.25rem;
   }
